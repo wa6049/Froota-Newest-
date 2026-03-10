@@ -23,12 +23,12 @@ export const ASSETS = {
   FAVICON: "./assets/images/favicon.png",
 
   // Hero Floating Elements
-  DRAGON_FRUIT: "./assets/images/dragonfruit.png",
-  MANGO: "./assets/images/mango.png",
-  LIME: "./assets/images/lime.png",
-  BERRY: "./assets/images/cherry.png", // Corrected from berry to cherry.png
-  LITCHI: "./assets/images/litchi.png",
-  PASSION: "./assets/images/passionfruit.png",
+  DRAGON_FRUIT: "./assets/images/products/dragonfruit.png",
+  MANGO: "./assets/images/products/mango.png",
+  LIME: "./assets/images/products/lime.png",
+  BERRY: "./assets/images/products/raspberry.jpg", // Corrected from cherry.png to raspberry.jpg
+  LITCHI: "./assets/images/products/lychee.png", // Corrected litchi.png to lychee.png
+  PASSION: "./assets/images/products/passionfruit.png",
 
   // Catalog / Showcase Images
   CATALOG_DRAGON: "./assets/images/catalog-dragon.jpg",
@@ -73,7 +73,7 @@ export const PRODUCTS: Product[] = [
     name: 'Ananas',
     description: 'Svježe Ananas provjerene kvalitete.',
     price: '3,00 €/komad',
-    image: 'https://picsum.photos/seed/fruit1/800/1000',
+    image: './assets/images/products/ananas.jpg',
     category: 'exotic'
   },
   {
@@ -489,7 +489,7 @@ export const PRODUCTS: Product[] = [
     name: 'Limeta',
     description: 'Svježe Limeta provjerene kvalitete.',
     price: '0,50 €/komad',
-    image: 'https://picsum.photos/seed/fruit53/800/1000',
+    image: './assets/images/products/lime.png',
     category: 'exotic'
   },
   {
@@ -537,7 +537,7 @@ export const PRODUCTS: Product[] = [
     name: 'Malina',
     description: 'Svježe Malina provjerene kvalitete.',
     price: '3,00 €/pakiranje (125 g)',
-    image: 'https://picsum.photos/seed/fruit59/800/1000',
+    image: './assets/images/products/raspberry.jpg',
     category: 'exotic'
   },
   {
@@ -553,7 +553,7 @@ export const PRODUCTS: Product[] = [
     name: 'Mango',
     description: 'Svježe Mango provjerene kvalitete.',
     price: '2,50 €/komad',
-    image: 'https://picsum.photos/seed/fruit61/800/1000',
+    image: './assets/images/products/mango.png',
     category: 'exotic'
   },
   {
@@ -561,7 +561,7 @@ export const PRODUCTS: Product[] = [
     name: 'Mango Alfonso (sezonski)',
     description: 'Svježe Mango Alfonso (sezonski) provjerene kvalitete.',
     price: '4,00 €/komad',
-    image: 'https://picsum.photos/seed/fruit62/800/1000',
+    image: './assets/images/products/mango.png',
     category: 'exotic'
   },
   {
@@ -705,7 +705,7 @@ export const PRODUCTS: Product[] = [
     name: 'Pitaja (Zmajsko voće)',
     description: 'Svježe Pitaja (Zmajsko voće) provjerene kvalitete.',
     price: 'crvena - 6,00 €/komad',
-    image: 'https://picsum.photos/seed/fruit80/800/1000',
+    image: './assets/images/products/dragonfruit.png',
     category: 'exotic'
   },
   {
@@ -713,7 +713,7 @@ export const PRODUCTS: Product[] = [
     name: 'Pitaja (Zmajsko voće)',
     description: 'Svježe Pitaja (Zmajsko voće) provjerene kvalitete.',
     price: 'žuta - 7,00 €/komad',
-    image: 'https://picsum.photos/seed/fruit81/800/1000',
+    image: './assets/images/catalog-yellow-pitaya.jpg',
     category: 'exotic'
   },
   {
@@ -818,6 +818,14 @@ export const PRODUCTS: Product[] = [
     description: 'Svježe Zeleni papar (svježi u zrnu) provjerene kvalitete.',
     price: '4,00 €/pakiranje (50 g)',
     image: 'https://picsum.photos/seed/fruit94/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '95',
+    name: 'Liči (Lychee)',
+    description: 'Svježe Liči (Lychee) provjerene kvalitete.',
+    price: '6,00 €/pakiranje',
+    image: './assets/images/products/lychee.png',
     category: 'exotic'
   }
 ];

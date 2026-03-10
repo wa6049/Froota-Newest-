@@ -5,19 +5,32 @@ import { ASSETS } from '../constants';
 interface LogoProps {
   className?: string;
   iconOnly?: boolean;
+  size?: '1x' | '2x' | '3x';
 }
 
-const Logo: React.FC<LogoProps> = ({ className = "", iconOnly = false }) => {
+const Logo: React.FC<LogoProps> = ({ className = "", iconOnly = false, size = '1x' }) => {
   const [imgError, setImgError] = useState(false);
+
+  const sizeClasses = {
+    '1x': 'h-11',
+    '2x': 'h-24',
+    '3x': 'h-32'
+  };
+
+  const minWidthStyles = {
+    '1x': '44px',
+    '2x': '96px',
+    '3x': '128px'
+  };
 
   if (!imgError && ASSETS.LOGO) {
     return (
       <div className={`flex items-center ${className}`}>
-        <img 
-          src={ASSETS.LOGO} 
-          alt="Froota Market" 
-          className="h-11 w-auto object-contain" 
-          style={{ minWidth: iconOnly ? '44px' : 'auto' }}
+        <img
+          src={ASSETS.LOGO}
+          alt="Froota Market"
+          className={`${sizeClasses[size]} w-auto object-contain flex-shrink-0`}
+          style={{ minWidth: iconOnly ? minWidthStyles[size] : 'auto' }}
           onError={() => setImgError(true)}
         />
       </div>
@@ -27,10 +40,10 @@ const Logo: React.FC<LogoProps> = ({ className = "", iconOnly = false }) => {
   return (
     <div className={`flex items-center gap-3 group ${className}`}>
       <div className="w-11 h-11 bg-froota-dark dark:bg-froota-pink rounded-full flex items-center justify-center text-froota-pink dark:text-froota-dark shadow-lg transition-transform group-hover:scale-110">
-         <div className="relative">
-           <Citrus size={24} className="group-hover:rotate-12 transition-transform" />
-           <span className="absolute -top-1 -right-1 w-3 h-3 bg-froota-green rounded-full border-2 border-froota-dark"></span>
-         </div>
+        <div className="relative">
+          <Citrus size={24} className="group-hover:rotate-12 transition-transform" />
+          <span className="absolute -top-1 -right-1 w-3 h-3 bg-froota-green rounded-full border-2 border-froota-dark"></span>
+        </div>
       </div>
       {!iconOnly && (
         <div className="flex flex-col leading-none">

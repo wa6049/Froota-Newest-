@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
       <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full bg-froota-pink/5 dark:bg-froota-pink/10 hidden lg:block" style={{ clipPath: 'polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%)' }}></div>
 
       <div className="max-w-7xl mx-auto px-6 w-full flex flex-col lg:grid lg:grid-cols-2 items-center z-20">
-        
+
         {/* Left Side: Content */}
         <div className="w-full text-center lg:text-left space-y-6 lg:space-y-12 mb-12 lg:mb-0">
           <div className="space-y-4">
@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
               </span>
             </h1>
           </div>
-          
+
           <p className="text-froota-dark/50 dark:text-white/40 text-base lg:text-xl max-w-md leading-relaxed font-medium mx-auto lg:mx-0">
             {t('hero.subtitle')}
           </p>
@@ -47,14 +47,14 @@ const Hero: React.FC = () => {
         {/* Right Side: Floating Fruit Garden */}
         <div className="w-full relative h-[300px] sm:h-[400px] lg:h-[600px] flex items-center justify-center lg:justify-end">
           <div className="relative w-full max-w-lg lg:max-w-none h-full">
-            
+
             {/* Soft Ambient Light */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-froota-pink/5 blur-[120px] rounded-full pointer-events-none"></div>
 
             {/* Central Dragonfruit (Main Hero) */}
             <div className="absolute top-[15%] left-[10%] lg:left-[15%] w-[180px] lg:w-[360px] z-30 animate-float-slow transition-transform duration-1000">
-              <img 
-                src={ASSETS.DRAGON_FRUIT} 
+              <img
+                src={ASSETS.DRAGON_FRUIT}
                 className="w-full drop-shadow-[0_50px_100px_rgba(233,44,108,0.35)] filter contrast-110"
                 alt="Dragonfruit"
               />
@@ -62,8 +62,8 @@ const Hero: React.FC = () => {
 
             {/* Mango */}
             <div className="absolute bottom-[20%] left-[5%] lg:left-[10%] w-[110px] lg:w-[220px] z-20 animate-float rotate-12 transition-transform duration-1000 delay-150">
-              <img 
-                src={ASSETS.MANGO} 
+              <img
+                src={ASSETS.MANGO}
                 className="w-full drop-shadow-[0_30px_60px_rgba(255,184,0,0.25)]"
                 alt="Mango"
               />
@@ -71,46 +71,52 @@ const Hero: React.FC = () => {
 
             {/* Lime Slices */}
             <div className="absolute top-[40%] right-[5%] lg:right-[0%] w-[70px] lg:w-[140px] z-40 animate-float-fast -rotate-12 transition-transform duration-1000 delay-300">
-              <img 
-                src={ASSETS.LIME} 
+              <img
+                src={ASSETS.LIME}
                 className="w-full drop-shadow-[0_20px_40px_rgba(151,192,45,0.2)]"
                 alt="Lime"
               />
             </div>
 
             {/* Passionfruit (Small Accent) */}
-            <div className="absolute bottom-[10%] right-[15%] lg:right-[20%] w-[60px] lg:w-[120px] z-10 animate-float-slow transition-transform duration-1000 delay-500 opacity-80">
-              <img 
-                src={ASSETS.PASSION} 
-                className="w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
-                alt="Passionfruit"
-              />
-            </div>
+            {ASSETS.PASSION && (
+              <div className="absolute bottom-[10%] right-[15%] lg:right-[20%] w-[60px] lg:w-[120px] z-10 animate-float-slow transition-transform duration-1000 delay-500 opacity-80">
+                <img
+                  src={ASSETS.PASSION}
+                  className="w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
+                  alt="Passionfruit"
+                />
+              </div>
+            )}
 
             {/* Litchi (Small Accent) */}
-            <div className="absolute top-[5%] right-[25%] w-[50px] lg:w-[100px] z-10 animate-float transition-transform duration-1000 delay-700 opacity-60">
-              <img 
-                src={ASSETS.LITCHI} 
-                className="w-full"
-                alt="Litchi"
-              />
-            </div>
+            {ASSETS.LITCHI && (
+              <div className="absolute top-[5%] right-[25%] w-[50px] lg:w-[100px] z-10 animate-float transition-transform duration-1000 delay-700 opacity-60">
+                <img
+                  src={ASSETS.LITCHI}
+                  className="w-full"
+                  alt="Litchi"
+                />
+              </div>
+            )}
 
             {/* Cherry / Berry (Small Accent) */}
-            <div className="absolute bottom-[35%] right-[5%] w-[40px] lg:w-[80px] z-10 animate-float-fast rotate-45 opacity-70">
-              <img 
-                src={ASSETS.BERRY} 
-                className="w-full"
-                alt="Cherry"
-              />
-            </div>
+            {ASSETS.BERRY && (
+              <div className="absolute bottom-[35%] right-[5%] w-[40px] lg:w-[80px] z-10 animate-float-fast rotate-45 opacity-70">
+                <img
+                  src={ASSETS.BERRY}
+                  className="w-full"
+                  alt="Cherry"
+                />
+              </div>
+            )}
 
             {/* Daily Fresh Sticker */}
             <div className="absolute top-[10%] right-[10%] lg:right-[20%] z-50 animate-pulse-soft">
               <div className="bg-froota-pink p-4 lg:p-8 rounded-[25px] lg:rounded-[35px] shadow-[0_25px_50px_rgba(233,44,108,0.4)] rotate-6 border border-white/20">
                 <p className="font-impact text-2xl lg:text-4xl text-white leading-none mb-1 uppercase">FRESH DAILY</p>
                 <p className="text-[7px] lg:text-[9px] font-black uppercase tracking-[0.2em] text-white/60">Arrived this morning.</p>
-                
+
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-froota-dark rounded-full flex items-center justify-center text-white border-4 border-froota-pink shadow-lg">
                   <span className="w-1.5 h-1.5 bg-froota-pink rounded-full"></span>
                 </div>
