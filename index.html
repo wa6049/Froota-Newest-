@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FROOTA MARKET | Zagreb - Kvaliteta Stanuje Ovdje</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'sans-serif'],
+              display: ['Playfair Display', 'serif'],
+              impact: ['Bebas Neue', 'sans-serif'],
+            },
+            colors: {
+              'froota-pink': '#E92C6C',
+              'froota-green': '#97C02D',
+              'froota-dark': '#102229',
+              'froota-white': '#FFFFFF',
+              'froota-wood': '#F7F3F0',
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'float-slow': 'float 10s ease-in-out infinite',
+              'float-fast': 'float 4s ease-in-out infinite',
+              'spin-slow': 'spin 12s linear infinite',
+              'pulse-soft': 'pulse 4s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+                '50%': { transform: 'translateY(-30px) rotate(8deg)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html { 
+        scroll-behavior: smooth; 
+      }
+      
+      @media (hover: hover) and (pointer: fine) {
+        * {
+          cursor: none !important;
+        }
+      }
+
+      body { 
+        -webkit-font-smoothing: antialiased; 
+        background-color: #FDFDFD;
+        overflow-x: hidden;
+      }
+
+      .dark body {
+        background-color: #102229;
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.2.4",
+    "react-dom": "https://esm.sh/react-dom@19.2.4",
+    "react-dom/client": "https://esm.sh/react-dom@19.2.4/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.460.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
