@@ -19,9 +19,9 @@ export interface Smoothie {
  */
 export const ASSETS = {
   // Brand & UI
-  LOGO: "./assets/images/logo.png", 
+  LOGO: "./assets/images/logo.png",
   FAVICON: "./assets/images/favicon.png",
-  
+
   // Hero Floating Elements
   DRAGON_FRUIT: "./assets/images/dragonfruit.png",
   MANGO: "./assets/images/mango.png",
@@ -29,13 +29,13 @@ export const ASSETS = {
   BERRY: "./assets/images/cherry.png", // Corrected from berry to cherry.png
   LITCHI: "./assets/images/litchi.png",
   PASSION: "./assets/images/passionfruit.png",
-  
+
   // Catalog / Showcase Images
   CATALOG_DRAGON: "./assets/images/catalog-dragon.jpg",
   CATALOG_MANGO: "./assets/images/catalog-mango..jpg", // Matching the double dot in your file list
   CATALOG_BOX: "./assets/images/catalog-box.jpg",
   CATALOG_YELLOW_PITAYA: "./assets/images/catalog-yellow-pitaya.jpg",
-  
+
   // Fresh Bar Images
   SMOOTHIE_DRAGON: "./assets/images/smoothie-dragon.jpg",
   SMOOTHIE_MANGO: "./assets/images/smoothie-mango.jpg",
@@ -70,61 +70,756 @@ export const BUSINESS_INFO: BusinessInfo = {
 export const PRODUCTS: Product[] = [
   {
     id: '1',
-    name: "Red Dragon Fruit",
-    description: "Premium Vietnamese Pitaya. Rich in antioxidants and vibrantly pink.",
-    price: "€4.50 / kom",
-    image: ASSETS.CATALOG_DRAGON,
-    category: 'exotic',
-    tag: "Market Best"
+    name: 'Ananas',
+    description: 'Svježe Ananas provjerene kvalitete.',
+    price: '3,00 €/komad',
+    image: 'https://picsum.photos/seed/fruit1/800/1000',
+    category: 'exotic'
   },
   {
     id: '2',
-    name: "Mango Sunshine",
-    description: "The sweetest seasonal Alfonso mangoes, ripened in the sun.",
-    price: "€5.00 / kom",
-    image: ASSETS.CATALOG_MANGO,
-    category: 'exotic',
-    tag: "Sweet Pick"
+    name: 'Avokado Hass',
+    description: 'Svježe Avokado Hass provjerene kvalitete.',
+    price: '1,80 €/komad',
+    image: 'https://picsum.photos/seed/fruit2/800/1000',
+    category: 'exotic'
   },
   {
     id: '3',
-    name: "Exotic Tasting Box",
-    description: "A premium selection of pre-sliced Pitaya, Mango, and Litchi clusters.",
-    price: "€18.50",
-    image: ASSETS.CATALOG_BOX,
-    category: 'platters',
-    tag: "Shareable"
+    name: 'Baby ananas',
+    description: 'Svježe Baby ananas provjerene kvalitete.',
+    price: '2,50 €/komad',
+    image: 'https://picsum.photos/seed/fruit3/800/1000',
+    category: 'exotic'
   },
   {
     id: '4',
-    name: "Yellow Pitaya",
-    description: "Rare Colombian Yellow Pitaya. Extremely sweet crunchy texture.",
-    price: "€6.00 / kom",
-    image: ASSETS.CATALOG_YELLOW_PITAYA,
+    name: 'Baby banana',
+    description: 'Svježe Baby banana provjerene kvalitete.',
+    price: '4,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit4/800/1000',
     category: 'exotic'
   },
-  // Generating more products to reach ~50
-  ...Array.from({ length: 46 }).map((_, i) => {
-    const id = (i + 5).toString();
-    const categories: Product['category'][] = ['exotic', 'platters', 'fresh-bar'];
-    const category = categories[i % categories.length];
-    const names = [
-      "Passion Fruit", "Mangosteen", "Rambutan", "Durian King", "Star Fruit", 
-      "Guava Pink", "Papaya Solo", "Lychee Royal", "Longan Sweet", "Jackfruit Honey",
-      "Coconut Fresh", "Pineapple Gold", "Avocado Hass", "Kiwi Gold", "Pomegranate",
-      "Fig Fresh", "Date Medjool", "Persimmon", "Custard Apple", "Snake Fruit"
-    ];
-    const name = names[i % names.length] + " " + (Math.floor(i / names.length) + 1);
-    
-    return {
-      id,
-      name,
-      description: `Premium quality ${name.toLowerCase()} sourced directly from sustainable farms.`,
-      price: `€${(3 + Math.random() * 10).toFixed(2)}`,
-      image: `https://picsum.photos/seed/fruit${id}/800/1000`,
-      category
-    };
-  })
+  {
+    id: '5',
+    name: 'Baby kivi',
+    description: 'Svježe Baby kivi provjerene kvalitete.',
+    price: '2,50 €/pakiranje (125 g)',
+    image: 'https://picsum.photos/seed/fruit5/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '6',
+    name: 'Baby krastavac',
+    description: 'Svježe Baby krastavac provjerene kvalitete.',
+    price: '2,00 €/pakiranje (200 g)',
+    image: 'https://picsum.photos/seed/fruit6/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '7',
+    name: 'Banana',
+    description: 'Svježe Banana provjerene kvalitete.',
+    price: '1,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit7/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '8',
+    name: 'Borovnica',
+    description: 'Svježe Borovnica provjerene kvalitete.',
+    price: '3,00 €/pakiranje (125 g)',
+    image: 'https://picsum.photos/seed/fruit8/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '9',
+    name: 'Breskva',
+    description: 'Svježe Breskva provjerene kvalitete.',
+    price: '2,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit9/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '10',
+    name: 'Brestovača (Bukovača)',
+    description: 'Svježe Brestovača (Bukovača) provjerene kvalitete.',
+    price: '4,00 €/pakiranje (250 g)',
+    image: 'https://picsum.photos/seed/fruit10/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '11',
+    name: 'Brokula',
+    description: 'Svježe Brokula provjerene kvalitete.',
+    price: '2,50 €/komad',
+    image: 'https://picsum.photos/seed/fruit11/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '12',
+    name: 'Brusnica svježa',
+    description: 'Svježe Brusnica svježa provjerene kvalitete.',
+    price: '3,50 €/pakiranje (200 g)',
+    image: 'https://picsum.photos/seed/fruit12/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '13',
+    name: 'Celer korijen',
+    description: 'Svježe Celer korijen provjerene kvalitete.',
+    price: '1,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit13/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '14',
+    name: 'Celer stabljika',
+    description: 'Svježe Celer stabljika provjerene kvalitete.',
+    price: '1,50 €/komad',
+    image: 'https://picsum.photos/seed/fruit14/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '15',
+    name: 'Cikla',
+    description: 'Svježe Cikla provjerene kvalitete.',
+    price: '1,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit15/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '16',
+    name: 'Crna rotkva',
+    description: 'Svježe Crna rotkva provjerene kvalitete.',
+    price: '1,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit16/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '17',
+    name: 'Crveni kupus',
+    description: 'Svježe Crveni kupus provjerene kvalitete.',
+    price: '1,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit17/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '18',
+    name: 'Cvjetača',
+    description: 'Svježe Cvjetača provjerene kvalitete.',
+    price: '2,50 €/komad',
+    image: 'https://picsum.photos/seed/fruit18/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '19',
+    name: 'Češnjak',
+    description: 'Svježe Češnjak provjerene kvalitete.',
+    price: '5,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit19/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '20',
+    name: 'Cherry rajčica',
+    description: 'Svježe Cherry rajčica provjerene kvalitete.',
+    price: '2,50 €/pakiranje (250 g)',
+    image: 'https://picsum.photos/seed/fruit20/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '21',
+    name: 'Čili papričica',
+    description: 'Svježe Čili papričica provjerene kvalitete.',
+    price: '1,50 €/pakiranje (50 g)',
+    image: 'https://picsum.photos/seed/fruit21/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '22',
+    name: 'Daikon (bijela rotkva)',
+    description: 'Svježe Daikon (bijela rotkva) provjerene kvalitete.',
+    price: '2,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit22/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '23',
+    name: 'Datulje svježe',
+    description: 'Svježe Datulje svježe provjerene kvalitete.',
+    price: '4,00 €/pakiranje (500 g)',
+    image: 'https://picsum.photos/seed/fruit23/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '24',
+    name: 'Dinja',
+    description: 'Svježe Dinja provjerene kvalitete.',
+    price: '2,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit24/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '25',
+    name: 'Đumbir',
+    description: 'Svježe Đumbir provjerene kvalitete.',
+    price: '4,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit25/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '26',
+    name: 'Gljive šampinjoni',
+    description: 'Svježe Gljive šampinjoni provjerene kvalitete.',
+    price: '2,50 €/pakiranje (500 g)',
+    image: 'https://picsum.photos/seed/fruit26/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '27',
+    name: 'Gljive shiitake',
+    description: 'Svježe Gljive shiitake provjerene kvalitete.',
+    price: '5,00 €/pakiranje (200 g)',
+    image: 'https://picsum.photos/seed/fruit27/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '28',
+    name: 'Grah svježi',
+    description: 'Svježe Grah svježi provjerene kvalitete.',
+    price: '3,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit28/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '29',
+    name: 'Grašak svježi',
+    description: 'Svježe Grašak svježi provjerene kvalitete.',
+    price: '3,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit29/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '30',
+    name: 'Grejp',
+    description: 'Svježe Grejp provjerene kvalitete.',
+    price: '2,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit30/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '31',
+    name: 'Grožđe bijelo',
+    description: 'Svježe Grožđe bijelo provjerene kvalitete.',
+    price: '3,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit31/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '32',
+    name: 'Grožđe crno',
+    description: 'Svježe Grožđe crno provjerene kvalitete.',
+    price: '3,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit32/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '33',
+    name: 'Guava',
+    description: 'Svježe Guava provjerene kvalitete.',
+    price: '3,50 €/komad',
+    image: 'https://picsum.photos/seed/fruit33/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '34',
+    name: 'Jabuka (razne sorte)',
+    description: 'Svježe Jabuka (razne sorte) provjerene kvalitete.',
+    price: '1,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit34/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '35',
+    name: 'Jagoda',
+    description: 'Svježe Jagoda provjerene kvalitete.',
+    price: '3,50 €/pakiranje (500 g)',
+    image: 'https://picsum.photos/seed/fruit35/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '36',
+    name: 'Kaki (Persimon)',
+    description: 'Svježe Kaki (Persimon) provjerene kvalitete.',
+    price: '2,00 €/komad',
+    image: 'https://picsum.photos/seed/fruit36/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '37',
+    name: 'Karambola (Star fruit)',
+    description: 'Svježe Karambola (Star fruit) provjerene kvalitete.',
+    price: '2,50 €/komad',
+    image: 'https://picsum.photos/seed/fruit37/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '38',
+    name: 'Kelj',
+    description: 'Svježe Kelj provjerene kvalitete.',
+    price: '1,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit38/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '39',
+    name: 'Kelj pupčar (Prokulica)',
+    description: 'Svježe Kelj pupčar (Prokulica) provjerene kvalitete.',
+    price: '2,50 €/pakiranje (500 g)',
+    image: 'https://picsum.photos/seed/fruit39/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '40',
+    name: 'Kesten svježi',
+    description: 'Svježe Kesten svježi provjerene kvalitete.',
+    price: '5,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit40/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '41',
+    name: 'Kivi',
+    description: 'Svježe Kivi provjerene kvalitete.',
+    price: '2,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit41/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '42',
+    name: 'Klementina',
+    description: 'Svježe Klementina provjerene kvalitete.',
+    price: '2,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit42/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '43',
+    name: 'Kokos orah',
+    description: 'Svježe Kokos orah provjerene kvalitete.',
+    price: '2,50 €/komad',
+    image: 'https://picsum.photos/seed/fruit43/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '44',
+    name: 'Koraba',
+    description: 'Svježe Koraba provjerene kvalitete.',
+    price: '1,00 €/komad',
+    image: 'https://picsum.photos/seed/fruit44/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '45',
+    name: 'Krastavac salatni',
+    description: 'Svježe Krastavac salatni provjerene kvalitete.',
+    price: '1,50 €/komad',
+    image: 'https://picsum.photos/seed/fruit45/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '46',
+    name: 'Kruška (razne sorte)',
+    description: 'Svježe Kruška (razne sorte) provjerene kvalitete.',
+    price: '2,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit46/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '47',
+    name: 'Krumpir mladi',
+    description: 'Svježe Krumpir mladi provjerene kvalitete.',
+    price: '1,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit47/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '48',
+    name: 'Krumpir obični',
+    description: 'Svježe Krumpir obični provjerene kvalitete.',
+    price: '1,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit48/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '49',
+    name: 'Kukuruz šećerac',
+    description: 'Svježe Kukuruz šećerac provjerene kvalitete.',
+    price: '1,00 €/klip',
+    image: 'https://picsum.photos/seed/fruit49/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '50',
+    name: 'Kumkvat',
+    description: 'Svježe Kumkvat provjerene kvalitete.',
+    price: '3,50 €/pakiranje (250 g)',
+    image: 'https://picsum.photos/seed/fruit50/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '51',
+    name: 'Kupina',
+    description: 'Svježe Kupina provjerene kvalitete.',
+    price: '3,00 €/pakiranje (125 g)',
+    image: 'https://picsum.photos/seed/fruit51/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '52',
+    name: 'Kupus bijeli',
+    description: 'Svježe Kupus bijeli provjerene kvalitete.',
+    price: '1,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit52/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '53',
+    name: 'Limeta',
+    description: 'Svježe Limeta provjerene kvalitete.',
+    price: '0,50 €/komad',
+    image: 'https://picsum.photos/seed/fruit53/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '54',
+    name: 'Limun',
+    description: 'Svježe Limun provjerene kvalitete.',
+    price: '2,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit54/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '55',
+    name: 'Lubenica',
+    description: 'Svježe Lubenica provjerene kvalitete.',
+    price: '1,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit55/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '56',
+    name: 'Luk crveni',
+    description: 'Svježe Luk crveni provjerene kvalitete.',
+    price: '1,20 €/kg',
+    image: 'https://picsum.photos/seed/fruit56/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '57',
+    name: 'Luk srebrenac',
+    description: 'Svježe Luk srebrenac provjerene kvalitete.',
+    price: '1,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit57/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '58',
+    name: 'Luk žuti',
+    description: 'Svježe Luk žuti provjerene kvalitete.',
+    price: '1,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit58/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '59',
+    name: 'Malina',
+    description: 'Svježe Malina provjerene kvalitete.',
+    price: '3,00 €/pakiranje (125 g)',
+    image: 'https://picsum.photos/seed/fruit59/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '60',
+    name: 'Mandarija',
+    description: 'Svježe Mandarija provjerene kvalitete.',
+    price: '1,80 €/kg',
+    image: 'https://picsum.photos/seed/fruit60/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '61',
+    name: 'Mango',
+    description: 'Svježe Mango provjerene kvalitete.',
+    price: '2,50 €/komad',
+    image: 'https://picsum.photos/seed/fruit61/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '62',
+    name: 'Mango Alfonso (sezonski)',
+    description: 'Svježe Mango Alfonso (sezonski) provjerene kvalitete.',
+    price: '4,00 €/komad',
+    image: 'https://picsum.photos/seed/fruit62/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '63',
+    name: 'Marakuja (Passion fruit)',
+    description: 'Svježe Marakuja (Passion fruit) provjerene kvalitete.',
+    price: '2,00 €/komad',
+    image: 'https://picsum.photos/seed/fruit63/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '64',
+    name: 'Marelica',
+    description: 'Svježe Marelica provjerene kvalitete.',
+    price: '3,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit64/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '65',
+    name: 'Matovilac',
+    description: 'Svježe Matovilac provjerene kvalitete.',
+    price: '2,00 €/pakiranje (100 g)',
+    image: 'https://picsum.photos/seed/fruit65/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '66',
+    name: 'Mladi luk',
+    description: 'Svježe Mladi luk provjerene kvalitete.',
+    price: '1,00 €/vezica',
+    image: 'https://picsum.photos/seed/fruit66/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '67',
+    name: 'Moruzgva (Romanesco)',
+    description: 'Svježe Moruzgva (Romanesco) provjerene kvalitete.',
+    price: '3,00 €/komad',
+    image: 'https://picsum.photos/seed/fruit67/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '68',
+    name: 'Mrkva',
+    description: 'Svježe Mrkva provjerene kvalitete.',
+    price: '1,20 €/kg',
+    image: 'https://picsum.photos/seed/fruit68/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '69',
+    name: 'Naranča',
+    description: 'Svježe Naranča provjerene kvalitete.',
+    price: '1,80 €/kg',
+    image: 'https://picsum.photos/seed/fruit69/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '70',
+    name: 'Nektarina',
+    description: 'Svježe Nektarina provjerene kvalitete.',
+    price: '2,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit70/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '71',
+    name: 'Papaja',
+    description: 'Svježe Papaja provjerene kvalitete.',
+    price: '4,50 €/komad',
+    image: 'https://picsum.photos/seed/fruit71/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '72',
+    name: 'Paprika babura',
+    description: 'Svježe Paprika babura provjerene kvalitete.',
+    price: '2,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit72/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '73',
+    name: 'Paprika kapia',
+    description: 'Svježe Paprika kapia provjerene kvalitete.',
+    price: '2,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit73/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '74',
+    name: 'Paprika roga',
+    description: 'Svježe Paprika roga provjerene kvalitete.',
+    price: '2,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit74/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '75',
+    name: 'Pastrnjak',
+    description: 'Svježe Pastrnjak provjerene kvalitete.',
+    price: '2,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit75/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '76',
+    name: 'Patlidžan',
+    description: 'Svježe Patlidžan provjerene kvalitete.',
+    price: '2,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit76/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '77',
+    name: 'Peršin korijen',
+    description: 'Svježe Peršin korijen provjerene kvalitete.',
+    price: '2,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit77/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '78',
+    name: 'Peršin list',
+    description: 'Svježe Peršin list provjerene kvalitete.',
+    price: '0,50 €/vezica',
+    image: 'https://picsum.photos/seed/fruit78/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '79',
+    name: 'Physalis (Zlatna bobica)',
+    description: 'Svježe Physalis (Zlatna bobica) provjerene kvalitete.',
+    price: '2,50 €/pakiranje (100 g)',
+    image: 'https://picsum.photos/seed/fruit79/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '80',
+    name: 'Pitaja (Zmajsko voće)',
+    description: 'Svježe Pitaja (Zmajsko voće) provjerene kvalitete.',
+    price: 'crvena - 6,00 €/komad',
+    image: 'https://picsum.photos/seed/fruit80/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '81',
+    name: 'Pitaja (Zmajsko voće)',
+    description: 'Svježe Pitaja (Zmajsko voće) provjerene kvalitete.',
+    price: 'žuta - 7,00 €/komad',
+    image: 'https://picsum.photos/seed/fruit81/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '82',
+    name: 'Rajčica grapolo',
+    description: 'Svježe Rajčica grapolo provjerene kvalitete.',
+    price: '2,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit82/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '83',
+    name: 'Rajčica volovsko srce',
+    description: 'Svježe Rajčica volovsko srce provjerene kvalitete.',
+    price: '3,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit83/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '84',
+    name: 'Rabarbara',
+    description: 'Svježe Rabarbara provjerene kvalitete.',
+    price: '4,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit84/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '85',
+    name: 'Radič crveni',
+    description: 'Svježe Radič crveni provjerene kvalitete.',
+    price: '2,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit85/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '86',
+    name: 'Rikola',
+    description: 'Svježe Rikola provjerene kvalitete.',
+    price: '1,50 €/pakiranje (100 g)',
+    image: 'https://picsum.photos/seed/fruit86/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '87',
+    name: 'Rotkvica',
+    description: 'Svježe Rotkvica provjerene kvalitete.',
+    price: '1,00 €/vezica',
+    image: 'https://picsum.photos/seed/fruit87/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '88',
+    name: 'Salata kristalka',
+    description: 'Svježe Salata kristalka provjerene kvalitete.',
+    price: '1,00 €/komad',
+    image: 'https://picsum.photos/seed/fruit88/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '89',
+    name: 'Salata puterica',
+    description: 'Svježe Salata puterica provjerene kvalitete.',
+    price: '1,00 €/komad',
+    image: 'https://picsum.photos/seed/fruit89/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '90',
+    name: 'Šljiva',
+    description: 'Svježe Šljiva provjerene kvalitete.',
+    price: '2,00 €/kg',
+    image: 'https://picsum.photos/seed/fruit90/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '91',
+    name: 'Šparoga svježa',
+    description: 'Svježe Šparoga svježa provjerene kvalitete.',
+    price: '5,00 €/vezica (500 g)',
+    image: 'https://picsum.photos/seed/fruit91/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '92',
+    name: 'Špinat',
+    description: 'Svježe Špinat provjerene kvalitete.',
+    price: '2,50 €/kg',
+    image: 'https://picsum.photos/seed/fruit92/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '93',
+    name: 'Zelena salata (razne vrste)',
+    description: 'Svježe Zelena salata (razne vrste) provjerene kvalitete.',
+    price: '1,00 €/komad',
+    image: 'https://picsum.photos/seed/fruit93/800/1000',
+    category: 'exotic'
+  },
+  {
+    id: '94',
+    name: 'Zeleni papar (svježi u zrnu)',
+    description: 'Svježe Zeleni papar (svježi u zrnu) provjerene kvalitete.',
+    price: '4,00 €/pakiranje (50 g)',
+    image: 'https://picsum.photos/seed/fruit94/800/1000',
+    category: 'exotic'
+  }
 ];
 
 export const SMOOTHIES: Smoothie[] = [
