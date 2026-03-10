@@ -31,16 +31,16 @@ export const ASSETS = {
   PASSION: "./assets/images/products/passionfruit.png",
 
   // Catalog / Showcase Images
-  CATALOG_DRAGON: "./assets/images/catalog-dragon.jpg",
-  CATALOG_MANGO: "./assets/images/catalog-mango..jpg", // Matching the double dot in your file list
-  CATALOG_BOX: "./assets/images/catalog-box.jpg",
-  CATALOG_YELLOW_PITAYA: "./assets/images/catalog-yellow-pitaya.jpg",
+  CATALOG_DRAGON: "./assets/images/products/catalog-dragon.jpg",
+  CATALOG_MANGO: "./assets/images/products/catalog-mango..jpg", // Matching the double dot in your file list
+  CATALOG_BOX: "./assets/images/products/catalog-box.jpg",
+  CATALOG_YELLOW_PITAYA: "./assets/images/products/catalog-yellow-pitaya.jpg",
 
   // Fresh Bar Images
-  SMOOTHIE_DRAGON: "./assets/images/smoothie-dragon.jpg",
-  SMOOTHIE_MANGO: "./assets/images/smoothie-mango.jpg",
-  SMOOTHIE_LIME: "./assets/images/smoothie-lime.jpg",
-  SMOOTHIE_BERRY: "./assets/images/smoothie-berry.jpg",
+  SMOOTHIE_DRAGON: "./assets/images/products/smoothie-dragon.jpg",
+  SMOOTHIE_MANGO: "./assets/images/products/smoothie-mango.jpg",
+  SMOOTHIE_LIME: "./assets/images/products/smoothie-lime.jpg",
+  SMOOTHIE_BERRY: "./assets/images/products/smoothie-berry.jpg",
 };
 
 export const PLACEHOLDERS = {
@@ -713,7 +713,7 @@ export const PRODUCTS: Product[] = [
     name: 'Pitaja (Zmajsko voće)',
     description: 'Svježe Pitaja (Zmajsko voće) provjerene kvalitete.',
     price: 'žuta - 7,00 €/komad',
-    image: './assets/images/catalog-yellow-pitaya.jpg',
+    image: './assets/images/products/catalog-yellow-pitaya.jpg',
     category: 'exotic'
   },
   {
