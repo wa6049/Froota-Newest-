@@ -34,7 +34,7 @@ const App: React.FC = () => {
       else if (hash === 'contact') setCurrentView('contact');
       else if (hash === 'privacy') setCurrentView('privacy');
       else setCurrentView('home');
-      
+
       // Scroll to top on view change
       window.scrollTo(0, 0);
     };
@@ -50,12 +50,12 @@ const App: React.FC = () => {
       <LanguageProvider>
         <div className="min-h-screen font-sans text-slate-900 dark:text-white transition-colors duration-500 selection:bg-froota-pink selection:text-white relative">
           {showSplash && <SplashScreen onFinish={() => setShowSplash(false)} />}
-          
+
           <CustomCursor />
           <PremiumBackground />
-          
+
           <Navbar currentView={currentView} />
-          
+
           <main className="relative z-10">
             {currentView === 'home' && (
               <div className="animate-in fade-in duration-1000">
@@ -66,11 +66,11 @@ const App: React.FC = () => {
               </div>
             )}
 
-            {currentView === 'products' && (
+            {/* {currentView === 'products' && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
                 <ProductsPage />
               </div>
-            )}
+            )} */}
 
             {currentView === 'special-delivery' && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -83,7 +83,7 @@ const App: React.FC = () => {
                 <ContactPage />
               </div>
             )}
-            
+
             {currentView === 'privacy' && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
                 <PrivacyPage />
