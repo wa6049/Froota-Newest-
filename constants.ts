@@ -14,33 +14,33 @@ export interface Smoothie {
 
 /**
  * ASSET REGISTRY
- * Using './assets/images/' ensures the browser looks in the local folder
+ * Using '/assets/images/' ensures the browser looks in the local folder
  * relative to the index.html file.
  */
 export const ASSETS = {
   // Brand & UI
-  LOGO: "./assets/images/logo.png",
-  FAVICON: "./assets/images/favicon.png",
+  LOGO: "/assets/images/logo.png",
+  FAVICON: "/assets/images/favicon.png",
 
   // Hero Floating Elements
-  DRAGON_FRUIT: "./assets/images/products/dragonfruit.png",
-  MANGO: "./assets/images/products/mango.png",
-  LIME: "./assets/images/products/lime.png",
-  BERRY: "./assets/images/products/raspberry.jpg", // Corrected from cherry.png to raspberry.jpg
-  LITCHI: "./assets/images/products/lychee.png", // Corrected litchi.png to lychee.png
-  PASSION: "./assets/images/products/passionfruit.png",
+  DRAGON_FRUIT: "/assets/images/products/dragonfruit.png",
+  MANGO: "/assets/images/products/mango.png",
+  LIME: "/assets/images/products/lime.png",
+  BERRY: "/assets/images/products/raspberry.jpg", // Corrected from cherry.png to raspberry.jpg
+  LITCHI: "/assets/images/products/lychee.png", // Corrected litchi.png to lychee.png
+  PASSION: "/assets/images/products/passionfruit.png",
 
   // Catalog / Showcase Images
-  CATALOG_DRAGON: "./assets/images/products/catalog-dragon.jpg",
-  CATALOG_MANGO: "./assets/images/products/catalog-mango..jpg", // Matching the double dot in your file list
-  CATALOG_BOX: "./assets/images/products/catalog-box.jpg",
-  CATALOG_YELLOW_PITAYA: "./assets/images/products/catalog-yellow-pitaya.jpg",
+  CATALOG_DRAGON: "/assets/images/products/catalog-dragon.jpg",
+  CATALOG_MANGO: "/assets/images/products/catalog-mango..jpg", // Matching the double dot in your file list
+  CATALOG_BOX: "/assets/images/products/catalog-box.jpg",
+  CATALOG_YELLOW_PITAYA: "/assets/images/products/catalog-yellow-pitaya.jpg",
 
   // Fresh Bar Images
-  SMOOTHIE_DRAGON: "./assets/images/products/smoothie-dragon.jpg",
-  SMOOTHIE_MANGO: "./assets/images/products/smoothie-mango.jpg",
-  SMOOTHIE_LIME: "./assets/images/products/smoothie-lime.jpg",
-  SMOOTHIE_BERRY: "./assets/images/products/smoothie-berry.jpg",
+  SMOOTHIE_DRAGON: "/assets/images/products/smoothie-dragon.jpg",
+  SMOOTHIE_MANGO: "/assets/images/products/smoothie-mango.jpg",
+  SMOOTHIE_LIME: "/assets/images/products/smoothie-lime.jpg",
+  SMOOTHIE_BERRY: "/assets/images/products/smoothie-berry.jpg",
 };
 
 export const PLACEHOLDERS = {
@@ -71,7 +71,7 @@ export const PRODUCTS: Product[] = [
     name: 'Ananas',
     description: 'Svježe Ananas provjerene kvalitete.',
     price: '3,00 €/komad',
-    image: './assets/images/products/ananas.jpg',
+    image: '/assets/images/products/ananas.jpg',
     category: 'exotic'
   },
   {
@@ -487,7 +487,7 @@ export const PRODUCTS: Product[] = [
     name: 'Limeta',
     description: 'Svježe Limeta provjerene kvalitete.',
     price: '0,50 €/komad',
-    image: './assets/images/products/lime.png',
+    image: '/assets/images/products/lime.png',
     category: 'exotic'
   },
   {
@@ -535,7 +535,7 @@ export const PRODUCTS: Product[] = [
     name: 'Malina',
     description: 'Svježe Malina provjerene kvalitete.',
     price: '3,00 €/pakiranje (125 g)',
-    image: './assets/images/products/raspberry.jpg',
+    image: '/assets/images/products/raspberry.jpg',
     category: 'exotic'
   },
   {
@@ -551,7 +551,7 @@ export const PRODUCTS: Product[] = [
     name: 'Mango',
     description: 'Svježe Mango provjerene kvalitete.',
     price: '2,50 €/komad',
-    image: './assets/images/products/mango.png',
+    image: '/assets/images/products/mango.png',
     category: 'exotic'
   },
   {
@@ -559,7 +559,7 @@ export const PRODUCTS: Product[] = [
     name: 'Mango Alfonso (sezonski)',
     description: 'Svježe Mango Alfonso (sezonski) provjerene kvalitete.',
     price: '4,00 €/komad',
-    image: './assets/images/products/mango.png',
+    image: '/assets/images/products/mango.png',
     category: 'exotic'
   },
   {
@@ -703,7 +703,7 @@ export const PRODUCTS: Product[] = [
     name: 'Pitaja (Zmajsko voće)',
     description: 'Svježe Pitaja (Zmajsko voće) provjerene kvalitete.',
     price: 'crvena - 6,00 €/komad',
-    image: './assets/images/products/dragonfruit.png',
+    image: '/assets/images/products/dragonfruit.png',
     category: 'exotic'
   },
   {
@@ -711,7 +711,7 @@ export const PRODUCTS: Product[] = [
     name: 'Pitaja (Zmajsko voće)',
     description: 'Svježe Pitaja (Zmajsko voće) provjerene kvalitete.',
     price: 'žuta - 7,00 €/komad',
-    image: './assets/images/products/catalog-yellow-pitaya.jpg',
+    image: '/assets/images/products/catalog-yellow-pitaya.jpg',
     category: 'exotic'
   },
   {
@@ -823,7 +823,7 @@ export const PRODUCTS: Product[] = [
     name: 'Liči (Lychee)',
     description: 'Svježe Liči (Lychee) provjerene kvalitete.',
     price: '6,00 €/pakiranje',
-    image: './assets/images/products/lychee.png',
+    image: '/assets/images/products/lychee.png',
     category: 'exotic'
   }
 ];
