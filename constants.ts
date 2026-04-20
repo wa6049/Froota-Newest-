@@ -44,8 +44,7 @@ export const ASSETS = {
 };
 
 export const PLACEHOLDERS = {
-  PHONE: "+385 1 234 5678",
-  EMAIL: "hello@frootamarket.hr",
+  EMAIL: "frootamarket@gmail.com",
   INSTAGRAM_URL: "https://instagram.com/frootamarket",
   TIKTOK_URL: "#",
   WOLT_URL: "https://wolt.com",
@@ -58,7 +57,6 @@ export const BUSINESS_INFO: BusinessInfo = {
   address: "Ozaljska ul. 83",
   city: "10000 Zagreb",
   mapUrl: PLACEHOLDERS.MAP_EMBED,
-  phone: PLACEHOLDERS.PHONE,
   email: PLACEHOLDERS.EMAIL,
   woltUrl: PLACEHOLDERS.WOLT_URL,
   glovoUrl: PLACEHOLDERS.GLOVO_URL,

@@ -64,18 +64,6 @@ const ProductsPage: React.FC = () => {
             >
               {t('products.filter_all')}
             </button>
-            <button 
-              onClick={() => setFilter('exotic')}
-              className={`px-5 lg:px-6 py-2 lg:py-2.5 rounded-full text-[8px] lg:text-[9px] font-black uppercase tracking-widest transition-all ${filter === 'exotic' ? 'bg-froota-pink text-white shadow-lg shadow-froota-pink/20' : 'bg-white dark:bg-froota-dark text-froota-dark/40 dark:text-white/40 hover:bg-froota-pink/10'}`}
-            >
-              {t('products.filter_exotic')}
-            </button>
-            <button 
-              onClick={() => setFilter('platters')}
-              className={`px-5 lg:px-6 py-2 lg:py-2.5 rounded-full text-[8px] lg:text-[9px] font-black uppercase tracking-widest transition-all ${filter === 'platters' ? 'bg-froota-pink text-white shadow-lg shadow-froota-pink/20' : 'bg-white dark:bg-froota-dark text-froota-dark/40 dark:text-white/40 hover:bg-froota-pink/10'}`}
-            >
-              {t('products.filter_platters')}
-            </button>
           </div>
 
           <div className="relative w-full lg:w-80">
@@ -106,31 +94,23 @@ const ProductsPage: React.FC = () => {
               transition={{ duration: 0.4, delay: idx * 0.05 }}
               className="group flex flex-col"
             >
-              <div className="relative aspect-square bg-froota-wood dark:bg-white/5 rounded-[24px] lg:rounded-[32px] overflow-hidden flex items-center justify-center p-4 lg:p-6 transition-all duration-500 group-hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)] group-hover:-translate-y-2">
-                <img 
-                  src={product.image} 
-                  alt={product.name} 
-                  className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.1)] transition-all duration-700 group-hover:scale-110" 
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute top-3 left-3 lg:top-4 lg:left-4">
+              <div className="bg-froota-wood dark:bg-white/5 rounded-[16px] lg:rounded-[24px] p-5 lg:p-6 transition-all duration-500 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] group-hover:-translate-y-1 flex flex-col h-full">
+                <div className="mb-3">
                   <span className="text-[6px] lg:text-[7px] font-black uppercase tracking-widest bg-white/80 dark:bg-froota-dark/80 px-2 py-0.5 lg:px-2.5 lg:py-1 rounded-full backdrop-blur-md text-froota-dark/40 dark:text-white/40">
                     {product.category}
                   </span>
                 </div>
-              </div>
-
-              <div className="mt-3 lg:mt-4 space-y-1.5 px-2">
-                <div className="flex items-start justify-between gap-2">
-                  <h3 className="text-base lg:text-lg font-impact text-froota-dark dark:text-white uppercase leading-none tracking-tight group-hover:text-froota-pink transition-colors">
+                
+                <div className="space-y-2 flex-grow">
+                  <h3 className="text-base lg:text-lg font-impact text-froota-dark dark:text-white uppercase leading-tight tracking-tight group-hover:text-froota-pink transition-colors">
                     {product.name}
                   </h3>
-                  <p className="text-[10px] lg:text-xs font-impact text-froota-dark dark:text-white whitespace-nowrap">{product.price}</p>
+                  <p className="text-[10px] lg:text-xs text-froota-dark/60 dark:text-white/50 font-medium leading-relaxed">
+                    {product.description}
+                  </p>
                 </div>
-                <p className="text-[9px] lg:text-[10px] text-froota-dark/40 dark:text-white/30 font-medium leading-relaxed line-clamp-2">
-                  {product.description}
-                </p>
-                <div className="pt-1">
+
+                <div className="pt-4 mt-auto">
                   <a href="#/contact" className="inline-flex items-center gap-1 text-[7px] lg:text-[8px] font-black uppercase tracking-widest text-froota-pink hover:text-froota-dark dark:hover:text-white transition-colors">
                     MARKET <ArrowUpRight size={10} />
                   </a>

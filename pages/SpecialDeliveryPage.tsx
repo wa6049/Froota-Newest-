@@ -10,16 +10,16 @@ const SpecialDeliveryPage: React.FC = () => {
     details: '',
     name: '',
     email: '',
-    phone: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitted(true);
-    }, 1000);
+    const subject = encodeURIComponent('Special Delivery Inquiry');
+    const body = encodeURIComponent(`Type: ${formState.type}\nName: ${formState.name}\nEmail: ${formState.email}\n\nDetails:\n${formState.details}`);
+    window.location.href = `mailto:frootamarket@gmail.com?subject=${subject}&body=${body}`;
+
+    setIsSubmitted(true);
   };
 
   const types = [
@@ -147,16 +147,7 @@ const SpecialDeliveryPage: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="space-y-3">
-                      <label className="text-[8px] lg:text-[9px] font-black uppercase tracking-widest text-froota-dark/40 dark:text-white/40">{t('location.label_phone')}</label>
-                      <input 
-                        required
-                        type="tel" 
-                        value={formState.phone}
-                        onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
-                        className="w-full bg-froota-wood dark:bg-white/5 border border-transparent rounded-full py-3 lg:py-4 px-5 lg:px-6 text-xs lg:text-sm focus:outline-none focus:ring-2 focus:ring-froota-pink/20 transition-all"
-                      />
-                    </div>
+
 
                     <button 
                       type="submit"

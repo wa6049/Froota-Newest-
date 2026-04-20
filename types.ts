@@ -17,7 +17,6 @@ export interface BusinessInfo {
   address: string;
   city: string;
   mapUrl: string;
-  phone: string;
   email: string;
   woltUrl: string;
   glovoUrl: string;

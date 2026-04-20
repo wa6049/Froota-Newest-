@@ -29,6 +29,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#/', '');
+
       if (hash === 'products') setCurrentView('products');
       else if (hash === 'special-delivery') setCurrentView('special-delivery');
       else if (hash === 'contact') setCurrentView('contact');
@@ -66,11 +67,11 @@ const App: React.FC = () => {
               </div>
             )}
 
-            {/* {currentView === 'products' && (
+            {currentView === 'products' && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
                 <ProductsPage />
               </div>
-            )} */}
+            )}
 
             {currentView === 'special-delivery' && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">

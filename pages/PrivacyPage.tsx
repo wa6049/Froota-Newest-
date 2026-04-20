@@ -21,7 +21,7 @@ const PrivacyPage: React.FC = () => {
         {
           icon: <Eye className="text-froota-green" size={24} />,
           title: 'Podaci koje prikupljamo',
-          text: 'Prikupljamo samo podatke koje nam dobrovoljno date putem naših kontakt obrazaca (ime, email, broj telefona) kako bismo mogli odgovoriti na vaše upite ili obraditi vaše zahtjeve za dostavu.'
+          text: 'Prikupljamo samo podatke koje nam dobrovoljno date putem naših kontakt obrazaca (ime, email) kako bismo mogli odgovoriti na vaše upite ili obraditi vaše zahtjeve za dostavu.'
         },
         {
           icon: <Lock className="text-froota-pink" size={24} />,
@@ -49,7 +49,7 @@ const PrivacyPage: React.FC = () => {
         {
           icon: <Eye className="text-froota-green" size={24} />,
           title: 'Data We Collect',
-          text: 'We only collect data that you voluntarily provide through our contact forms (name, email, phone number) so that we can respond to your inquiries or process your delivery requests.'
+          text: 'We only collect data that you voluntarily provide through our contact forms (name, email) so that we can respond to your inquiries or process your delivery requests.'
         },
         {
           icon: <Lock className="text-froota-pink" size={24} />,
@@ -136,8 +136,8 @@ const PrivacyPage: React.FC = () => {
         >
           <p className="text-sm text-froota-dark/40 dark:text-white/30">
             {language === 'hr' 
-              ? 'Za sva pitanja vezana uz zaštitu podataka, kontaktirajte nas na info@froota.hr' 
-              : 'For any questions regarding data protection, contact us at info@froota.hr'}
+              ? 'Za sva pitanja vezana uz zaštitu podataka, kontaktirajte nas na frootamarket@gmail.com' 
+              : 'For any questions regarding data protection, contact us at frootamarket@gmail.com'}
           </p>
         </motion.div>
 

@@ -11,6 +11,10 @@ const ContactPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const subject = encodeURIComponent('Contact Form Submission');
+    const body = encodeURIComponent(`Name: ${formState.name}\nEmail: ${formState.email}\n\nMessage:\n${formState.message}`);
+    window.location.href = `mailto:${BUSINESS_INFO.email}?subject=${subject}&body=${body}`;
+    
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -69,15 +73,7 @@ const ContactPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 items-center group p-5 lg:p-6 bg-froota-wood dark:bg-white/5 rounded-[24px] lg:rounded-[32px] border border-black/5 dark:border-white/5 transition-all hover:shadow-xl text-center sm:text-left">
-                <div className="shrink-0 w-12 h-12 lg:w-14 lg:h-14 rounded-xl lg:rounded-2xl bg-white dark:bg-froota-dark flex items-center justify-center text-froota-pink shadow-lg group-hover:scale-110 transition-transform">
-                  <Phone size={20} />
-                </div>
-                <div>
-                  <p className="text-[8px] lg:text-[9px] font-black uppercase tracking-widest text-froota-dark/40 dark:text-white/30 mb-1">WhatsApp / Mob</p>
-                  <p className="text-base lg:text-lg font-bold text-froota-dark dark:text-white">{BUSINESS_INFO.phone}</p>
-                </div>
-              </div>
+
             </div>
 
             {/* Form Area */}

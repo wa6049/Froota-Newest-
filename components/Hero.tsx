@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-froota-pink/5 blur-[120px] rounded-full pointer-events-none"></div>
 
             {/* Central Dragonfruit (Main Hero) */}
-            <div className="absolute top-[15%] left-[10%] lg:left-[15%] w-[180px] lg:w-[360px] z-30 animate-float-slow transition-transform duration-1000">
+            <div className="absolute top-[5%] left-[5%] lg:left-[10%] w-[180px] lg:w-[360px] z-30 animate-float transition-transform duration-[2000ms] ease-in-out hover:scale-105">
               <img
                 src={ASSETS.DRAGON_FRUIT}
                 className="w-full drop-shadow-[0_50px_100px_rgba(233,44,108,0.35)] filter contrast-110"
@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Mango */}
-            <div className="absolute bottom-[20%] left-[5%] lg:left-[10%] w-[110px] lg:w-[220px] z-20 animate-float rotate-12 transition-transform duration-1000 delay-150">
+            <div className="absolute bottom-[15%] left-[-5%] lg:left-[0%] w-[110px] lg:w-[220px] z-20 animate-float-slow -rotate-6 transition-transform duration-[1500ms] delay-300 opacity-95">
               <img
                 src={ASSETS.MANGO}
                 className="w-full drop-shadow-[0_30px_60px_rgba(255,184,0,0.25)]"
@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Lime Slices */}
-            <div className="absolute top-[40%] right-[5%] lg:right-[0%] w-[70px] lg:w-[140px] z-40 animate-float-fast -rotate-12 transition-transform duration-1000 delay-300">
+            <div className="absolute top-[15%] right-[-5%] lg:right-[5%] w-[70px] lg:w-[140px] z-40 animate-float-fast rotate-12 transition-transform duration-[1200ms] delay-150 opacity-90">
               <img
                 src={ASSETS.LIME}
                 className="w-full drop-shadow-[0_20px_40px_rgba(151,192,45,0.2)]"
@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
 
             {/* Passionfruit (Small Accent) */}
             {ASSETS.PASSION && (
-              <div className="absolute bottom-[10%] right-[15%] lg:right-[20%] w-[60px] lg:w-[120px] z-10 animate-float-slow transition-transform duration-1000 delay-500 opacity-80">
+              <div className="absolute bottom-[5%] right-[-10%] lg:right-[10%] w-[180px] lg:w-[360px] z-10 animate-float -rotate-12 transition-transform duration-[2500ms] delay-500 opacity-100 drop-shadow-2xl">
                 <img
                   src={ASSETS.PASSION}
                   className="w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
 
             {/* Litchi (Small Accent) */}
             {ASSETS.LITCHI && (
-              <div className="absolute top-[5%] right-[25%] w-[50px] lg:w-[100px] z-10 animate-float transition-transform duration-1000 delay-700 opacity-60">
+              <div className="absolute top-[35%] right-[35%] lg:right-[40%] w-[150px] lg:w-[300px] z-10 animate-float-slow rotate-45 transition-transform duration-[1800ms] delay-700 opacity-70">
                 <img
                   src={ASSETS.LITCHI}
                   className="w-full"
@@ -100,16 +100,16 @@ const Hero: React.FC = () => {
               </div>
             )}
 
-            {/* Cherry / Berry (Small Accent) */}
+            {/* Cherry / Berry (Small Accent)
             {ASSETS.BERRY && (
-              <div className="absolute bottom-[35%] right-[5%] w-[40px] lg:w-[80px] z-10 animate-float-fast rotate-45 opacity-70">
+              <div className="absolute bottom-[45%] left-[30%] lg:left-[25%] w-[40px] lg:w-[80px] z-10 animate-float-fast -rotate-45 transition-transform duration-[1000ms] delay-200 opacity-85">
                 <img
                   src={ASSETS.BERRY}
                   className="w-full"
                   alt="Cherry"
                 />
               </div>
-            )}
+            )} */}
 
             {/* Daily Fresh Sticker */}
             <div className="absolute top-[10%] right-[10%] lg:right-[20%] z-50 animate-pulse-soft">
